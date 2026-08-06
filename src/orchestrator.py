@@ -21,6 +21,11 @@ class InterviewOrchestrator:
 
     def run(self, profile: CandidateProfile):
         state = SessionState(profile=profile, difficulty=DIFFICULTY_START)
+
+        # Hand the caller a live reference to the state before any turn runs, so an
+        # interrupted session can still be coached on the turns completed so far.
+        yield ("session_start", 0, state)
+
         decision = self.controller.seed_decision(state)
 
         for turn_num in range(1, MAX_TURNS + 1):

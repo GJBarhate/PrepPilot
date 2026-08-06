@@ -31,9 +31,11 @@ Choose exactly one `action` based on this policy. Follow it strictly:
 - The interview should stay productive, not punitive. Move to fresh ground at a lower bar.
 
 ### Off-topic answer (answer_type is "off_topic")
-- Action: `switch_topic`
+- Action: `probe_deeper`
 - Keep difficulty the same
-- Directive should redirect to the same general area but with a clearer, more specific question angle.
+- Keep `topic` set to the SAME topic that was just asked about — the question was never actually answered, so the topic is not yet covered.
+- The directive MUST begin with "Redirect the candidate:" and then name what the original question actually asked for. The Interviewer needs to know the previous answer missed the question, otherwise it will simply move on.
+- EXCEPTION: If the same topic has already been redirected twice, use `switch_topic` instead — do not trap the candidate on a question they keep missing.
 
 ### Adequate answer (score between 2.0 and 4.0, answer_type is "substantive" or "partial")
 - Action: `move_on`

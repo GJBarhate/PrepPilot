@@ -80,7 +80,11 @@ def run_simulation(persona: str, role: str, focus: str, out_path: str):
     while True:
         event_type, turn_num, data = event
 
-        if event_type == "question":
+        if event_type == "session_start":
+            state = data
+            event = next(gen)
+
+        elif event_type == "question":
             print(f"  Turn {turn_num}: generating answer...", flush=True)
             answer = simulate(client, persona_prompt, data, prior_answers)
             prior_answers.append(answer)
@@ -99,6 +103,9 @@ def run_simulation(persona: str, role: str, focus: str, out_path: str):
         elif event_type == "state":
             state = data
             break
+
+        else:
+            event = next(gen)
 
     lines = [
         f"# Mock Interview Transcript — {role} ({persona} candidate)",

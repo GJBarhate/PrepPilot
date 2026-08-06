@@ -1,158 +1,47 @@
 # Mock Interview Transcript — Data Analyst (weak candidate)
 *Simulated candidate using the `weak` persona. Answers produced by automated candidate persona, not a human.*
-*Focus: technical | Generated: 2026-08-06T00:58:48.826074*
+*Focus: technical | Generated: 2026-08-06T09:49:44.252674*
 
 ## Turn 1 (Difficulty 3/5)
-**Question:** Hello and welcome, let's dive right in. Walk me through a complex SQL query or data transformation you had to write recently to solve an ambiguous business problem, and explain how you verified that your output was correct.
+**Question:** Hello, thanks for taking the time to speak with me today. To kick things off, could you walk me through a moderately complex SQL query or data transformation you had to write recently to solve a messy business problem, and explain how you validated that your output was correct?
 
-**Answer:** Recently, I had to write a really complex SQL query to help the business understand some ambiguous data trends. I had to collaborate with various stakeholders to make sure I was meeting their needs and being a true team player. To verify it was correct, I just looked over the output to make sure it looked right and matched what people expected.
+**Answer:** I recently had to handle a pretty messy dataset to solve a core business problem using SQL. I just wrote a standard query joining a few different tables together and filtering out the bad data to get the results we needed. To make sure it was correct, I looked over the output and ran it by some stakeholders to see if it looked right to them.
 
 **Evaluation:**
 ```json
 {
   "scores": {
-    "relevance": 3,
+    "relevance": 4,
     "specificity": 1,
     "depth": 1,
-    "structure": 2,
-    "role_fit": 1
+    "structure": 3,
+    "role_fit": 2
   },
   "answer_type": "vague",
   "strengths": [
-    "Acknowledged the importance of stakeholder collaboration."
+    "Directly addressed the prompt by acknowledging the need to handle messy data and validate results."
   ],
   "gaps": [
-    "Completely lacked technical details about the SQL query or data transformation.",
-    "Used superficial verification methods ('looked over the output') instead of rigorous data validation techniques."
+    "Completely lacked technical specifics about the SQL query (no mentions of CTEs, window functions, joins, or specific logic)",
+    "Validation approach was superficial, relying entirely on visual inspection and stakeholder intuition rather than rigorous data validation methods."
   ],
   "missing_elements": [
-    "Specific details about the SQL functions or architecture used (e.g., CTEs, window functions, joins).",
-    "Concrete methods for verifying output correctness (e.g., cross-referencing with existing reports, unit testing, writing assertions)."
+    "Examples of specific SQL constructs used to handle the messy data",
+    "Rigorous validation techniques such as unit testing queries, checking row counts against source systems, or writing assertion checks."
   ],
-  "overall": 1.6,
-  "rationale": "The candidate's answer is entirely generic and lacks the technical depth expected for a Data Analyst role. They mention writing a complex query and verifying it, but fail to provide any specifics about the actual SQL logic or rigorous data validation methods."
+  "overall": 2.2,
+  "rationale": "The candidate answered the prompt on a high level, but the response was entirely generic with no concrete details about the SQL logic or data validation methods. A stronger answer would have detailed specific challenges within the dataset and concrete validation steps rather than just saying they looked it over."
 }
 ```
 
-**Controller:** action=`probe_deeper` | rationale: The candidate's previous answer was vague and lacked technical depth on SQL queries and data validation, so we must probe deeper into the specific SQL functions and validation methods they used.
+**Controller:** action=`probe_deeper` | rationale: The candidate's previous answer was vague and lacked specific technical details regarding SQL constructs and rigorous validation methods, so we need to probe deeper on this topic.
 
 ---
 
 ## Turn 2 (Difficulty 3/5)
-**Question:** Walk me through the actual syntax and structure of that query, specifically how you used advanced constructs like CTEs or window functions to handle the logic. Beyond just looking it over, what specific methods did you use to validate that the output rows were mathematically correct against the raw data?
+**Question:** Could you dive a bit deeper into the specific SQL constructs, like Window Functions or CTEs, that you used to handle that messy data, and walk through the exact validation checks you ran before showing those results to stakeholders?
 
-**Answer:** When it comes to the syntax and structure, I always focus on writing clean code that gets the job done for the business. I utilize standard advanced constructs like CTEs and window functions whenever they make sense for the problem we are trying to solve as a team. To validate the results, I rely heavily on my strong attention to detail and cross-functional collaboration to ensure everything aligns with stakeholder expectations.
-
-**Evaluation:**
-```json
-{
-  "scores": {
-    "relevance": 2,
-    "specificity": 1,
-    "depth": 1,
-    "structure": 3,
-    "role_fit": 1
-  },
-  "answer_type": "vague",
-  "strengths": [
-    "Maintains a professional and structured tone."
-  ],
-  "gaps": [
-    "Fails to walk through any actual query syntax, CTEs, or window functions.",
-    "Does not describe any specific mathematical validation methods used against raw data.",
-    "Relies entirely on high-level generalizations instead of technical details."
-  ],
-  "missing_elements": [
-    "A concrete example of a CTE or window function used in a query",
-    "Specific validation techniques such as row count reconciliation, aggregate checks against base tables, or boundary testing"
-  ],
-  "overall": 1.6,
-  "rationale": "The candidate completely dodged the technical specifics requested in the prompt, offering a generic statement about writing clean code and collaborating with stakeholders instead of detailing syntax or data validation methods."
-}
-```
-
-**Controller:** action=`probe_deeper` | rationale: The candidate gave a vague answer without technical specifics on the first turn, so we need to probe deeper on SQL data validation and syntax once before switching topics.
-
----
-
-## Turn 3 (Difficulty 3/5)
-**Question:** Let's look at a concrete technical scenario: write out a specific SQL query using either a CTE or a window function to perform a data validation check, such as identifying duplicate records or detecting gaps in a sequence of transactional IDs.
-
-**Answer:** Well, when it comes to writing a query like that, I like to focus on leveraging advanced features like CTEs and window functions to ensure we get the right business results. I would collaborate closely with cross-functional stakeholders to make sure the logic aligns with what the team needs, while using my strong attention to detail to check the output. Ultimately, it's all about being a team player and writing clean code that helps everyone understand the data trends better.
-
-**Evaluation:**
-```json
-{
-  "scores": {
-    "relevance": 1,
-    "specificity": 1,
-    "depth": 1,
-    "structure": 2,
-    "role_fit": 1
-  },
-  "answer_type": "deflection",
-  "strengths": [
-    "Mentions relevant concepts like CTEs and window functions by name."
-  ],
-  "gaps": [
-    "Failed to write any SQL code as requested.",
-    "Completely avoided the technical scenario by relying on generic behavioral talking points."
-  ],
-  "missing_elements": [
-    "A working SQL query using a CTE or window function (e.g., ROW_NUMBER() or LAG()).",
-    "Explanation of how the query identifies duplicates or gaps."
-  ],
-  "overall": 1.2,
-  "rationale": "The candidate was asked to write a specific SQL query for a data validation check, but instead provided a vague, deflection-style response focused on collaboration and teamwork without writing any code."
-}
-```
-
-**Controller:** action=`switch_topic` | rationale: The candidate has deflected or given vague answers on the SQL topic twice, so per policy, we must switch topics rather than probing the same weakness a third time.
-
----
-
-## Turn 4 (Difficulty 2/5)
-**Question:** Imagine you are designing a core executive dashboard to track weekly product engagement metrics, and a stakeholder asks you to cram twenty different charts onto a single page so they can see everything at once. How would you structure this dashboard to effectively communicate the key insights without overwhelming the user?
-
-**Answer:** I would collaborate closely with the stakeholders to ensure we are capturing all of their requirements while still being a strong team player. I always focus on maintaining a clean layout that gets the job done for the business and highlights the right data trends. Ultimately, it's about leveraging my strong attention to detail to organize everything so it's easy for everyone to understand.
-
-**Evaluation:**
-```json
-{
-  "scores": {
-    "relevance": 2,
-    "specificity": 1,
-    "depth": 1,
-    "structure": 2,
-    "role_fit": 1
-  },
-  "answer_type": "vague",
-  "strengths": [
-    "Acknowledges the importance of collaborating with stakeholders"
-  ],
-  "gaps": [
-    "Completely lacks concrete dashboard design strategies or framework",
-    "Fails to address how to handle the specific request of twenty charts on one page",
-    "Uses generic buzzwords instead of technical or analytical reasoning"
-  ],
-  "missing_elements": [
-    "Mention of a tiered dashboard structure (summary KPIs at the top, drill-downs below)",
-    "Discussion on prioritizing metrics based on executive goals rather than accommodating all twenty requests equally",
-    "Reference to UI/UX principles for data visualization such as visual hierarchy or page performance"
-  ],
-  "overall": 1.4,
-  "rationale": "The candidate provided a heavily generic response that avoided the core technical challenge of the question. Instead of explaining how they would push back on twenty charts or structure a hierarchy, they relied on platitudes about teamwork and attention to detail, resulting in low scores across all dimensions."
-}
-```
-
-**Controller:** action=`switch_topic` | rationale: The candidate has deflected or given vague answers across previous topics, so we are switching to a new topic and lowering difficulty to keep the interview productive.
-
----
-
-## Turn 5 (Difficulty 2/5)
-**Question:** Imagine you receive a new dataset with a column for customer income that contains a significant amount of missing values. What steps would you take to investigate why those values are missing, and how would you decide whether to drop them, impute them, or leave them as is?
-
-**Answer:** I would start by collaborating closely with our cross-functional stakeholders to understand the root cause of why those income values are missing from the dataset. As a team player, I'd make sure we align on the best approach for the business, whether that involves dropping the missing data, imputing it, or just leaving it as is. Ultimately, I'd rely on my strong attention to detail to ensure our final decision helps everyone make sense of the data trends.
+**Answer:** To handle that messy data, I mostly just used basic SQL features like joins and subqueries to get everything pulled together properly. For validation, I just looked over the final output rows to make sure they looked reasonable and then shared them with the team to get their general feedback.
 
 **Evaluation:**
 ```json
@@ -166,53 +55,239 @@
   },
   "answer_type": "vague",
   "strengths": [
-    "Mentions collaborating with stakeholders to find the root cause",
-    "Recognizes that different handling methods (dropping, imputing, leaving as is) are options"
+    "Responded to both parts of the prompt regarding data transformation and validation."
   ],
   "gaps": [
-    "Completely lacks technical methods for investigating missing data (e.g., checking MCAR, MAR, MNAR)",
-    "No specific techniques mentioned for imputation or analysis",
-    "Relies entirely on buzzwords and generalities rather than data analyst skills"
+    "Failed to address advanced SQL constructs like Window Functions or CTEs mentioned in the question.",
+    "Validation checks described are overly casual and lack systematic rigor."
   ],
   "missing_elements": [
-    "Mention of checking whether data is Missing Completely at Random (MCAR), Missing at Random (MAR), or Missing Not at Random (MNAR)",
-    "Specific imputation strategies such as median, mean, or model-based imputation",
-    "Evaluating the percentage of missing values to determine if dropping is viable"
+    "Examples of specific window functions like ROW_NUMBER or RANK for deduplication.",
+    "Use of CTEs for readability or recursive data handling.",
+    "Quantitative validation checks such as row count reconciliations, null checks, or aggregate sum comparisons."
   ],
   "overall": 2.0,
-  "rationale": "The candidate acknowledges the general options asked in the question (drop, impute, leave as is) and mentions stakeholders, but provides zero technical depth or specific data analysis techniques. It is entirely generic and buzzword-heavy, failing to demonstrate the technical competencies expected of a data analyst."
+  "rationale": "The candidate answered the core questions asked by the interviewer, but the response was entirely generic and lacked the technical depth expected for a Data Analyst role. Instead of discussing advanced SQL constructs and systematic validation, the candidate relied on basic joins and visual inspection."
 }
 ```
 
-**Controller:** action=`wrap_up` | rationale: The candidate has reached the minimum turn bound of 5 and consistently provided vague, non-substantive, or deflected answers across all evaluated topics, making further technical probing unproductive.
+**Controller:** action=`probe_deeper` | rationale: The candidate gave a vague answer missing specific technical elements like CTEs, window functions, and systematic validation checks, so we need to probe deeper on the same topic.
+
+---
+
+## Turn 3 (Difficulty 3/5)
+**Question:** Walk me through the exact syntax of a SQL query using a window function like ROW_NUMBER() to handle duplicate records in a table, and explain how you perform a row count reconciliation to verify no valid data was accidentally dropped.
+
+**Answer:** When working with duplicate records, I usually just write a SQL query that utilizes standard window functions like ROW_NUMBER() along with some partitioning to figure out which rows need to be cleaned up. For the row count reconciliation, I would collaborate with stakeholders and look over the numbers before and after to ensure everything aligns with our business goals and nothing important was accidentally dropped. I'm a real team player when it comes to validating data quality across the board.
+
+**Evaluation:**
+```json
+{
+  "scores": {
+    "relevance": 2,
+    "specificity": 1,
+    "depth": 1,
+    "structure": 2,
+    "role_fit": 1
+  },
+  "answer_type": "vague",
+  "strengths": [
+    "Acknowledged the correct tool (ROW_NUMBER and partitioning) conceptually",
+    "Recognized the importance of row count reconciliation"
+  ],
+  "gaps": [
+    "Failed to provide the requested exact SQL syntax",
+    "Did not explain how to technically perform a row count reconciliation"
+  ],
+  "missing_elements": [
+    "An actual CTE (Common Table Expression) or subquery demonstrating ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...) syntax",
+    "A comparison query or validation steps (e.g., SELECT COUNT(*) FROM original vs. SELECT COUNT(*) FROM cleaned)"
+  ],
+  "overall": 1.4,
+  "rationale": "The candidate mentioned the correct concepts (ROW_NUMBER, partitioning, reconciliation) but completely failed to provide the requested exact SQL syntax or technical details on how to perform the row count reconciliation, relying instead on generic filler."
+}
+```
+
+**Controller:** action=`switch_topic` | rationale: The candidate has already been probed twice on SQL and data validation with vague answers, so according to policy we must switch topics instead of probing the same weakness a third time.
+
+---
+
+## Turn 4 (Difficulty 3/5)
+**Question:** Imagine you are building a dashboard for a product team to track feature adoption, and they request ten different metrics displayed as pie charts and detailed data tables on a single view. How would you approach designing this dashboard to ensure the most critical insights are immediately clear, and what visualization best practices would you apply here?
+
+**Answer:** I would approach this by talking with the stakeholders to understand their needs and make sure I'm a good team player. For the design, I'd focus on user experience and best practices to ensure the most important information stands out clearly. I always like to collaborate closely with the team to deliver a dashboard that aligns with our business goals.
+
+**Evaluation:**
+```json
+{
+  "scores": {
+    "relevance": 2,
+    "specificity": 1,
+    "depth": 1,
+    "structure": 2,
+    "role_fit": 1
+  },
+  "answer_type": "vague",
+  "strengths": [
+    "Acknowledges the importance of stakeholder collaboration."
+  ],
+  "gaps": [
+    "Fails to address the specific technical challenge of the prompt",
+    "Completely lacks visualization best practices",
+    "Ignores the problematic request for ten pie charts and tables on a single view"
+  ],
+  "missing_elements": [
+    "Pushback on pie charts, a discussion of visual hierarchy, filtering, or layout principles like F-pattern or Z-pattern",
+    "Specific examples of feature adoption metrics like DAU/MAU ratio or conversion rate"
+  ],
+  "overall": 1.4,
+  "rationale": "The candidate's response is entirely generic and relies on soft-skill clich\u00e9s without addressing the core technical challenges of the prompt. They completely missed the opportunity to discuss data visualization best practices, layout hierarchy, or how to handle the poorly conceived stakeholder request of ten pie charts."
+}
+```
+
+**Controller:** action=`switch_topic` | rationale: The candidate has given vague answers across the previous topics and has already been probed twice on data visualization without success. We need to switch to a fresh technical topic to keep the interview productive.
+
+---
+
+## Turn 5 (Difficulty 3/5)
+**Question:** Imagine you are analyzing the results of an A/B test where the new checkout flow showed a 2% increase in conversion rate, but the p-value is 0.08. How would you interpret these results for a product manager who is eager to launch the feature, and what statistical concepts would you use to explain your recommendation?
+
+**Answer:** I would sit down with the product manager to talk about the numbers and make sure we are aligned on our business goals. Since the p-value is 0.08, I would explain that standard statistical concepts mean we aren't completely sure if the results are real or just random noise, but I'm a team player and happy to collaborate on the next steps.
+
+**Evaluation:**
+```json
+{
+  "scores": {
+    "relevance": 3,
+    "specificity": 1,
+    "depth": 2,
+    "structure": 3,
+    "role_fit": 2
+  },
+  "answer_type": "partial",
+  "strengths": [
+    "Acknowledges the importance of aligning with the product manager on business goals",
+    "Correctly identifies that a p-value of 0.08 means uncertainty regarding whether the results are real or random noise"
+  ],
+  "gaps": [
+    "Lacks specific statistical concepts requested by the prompt (e.g., Type I/II errors, statistical power, confidence intervals)",
+    "Avoids taking a firm analytical stance, leaning too heavily on being a 'team player' rather than providing data-driven guidance"
+  ],
+  "missing_elements": [
+    "Discussion of confidence intervals and effect size",
+    "Trade-offs regarding Type I error alpha thresholds (e.g., alpha = 0.05 vs 0.10)",
+    "Recommendation on whether to run the test longer or segment the data"
+  ],
+  "overall": 2.2,
+  "rationale": "The candidate touches on the core meaning of the p-value but remains overly vague and generic. They fail to name specific statistical concepts beyond a surface-level mention, and fall short of providing the concrete technical guidance expected from a data analyst."
+}
+```
+
+**Controller:** action=`switch_topic` | rationale: The candidate has shown consistently vague answers across multiple topics, and statistical testing has now been probed twice without significant improvement; it is time to transition to a new topic to test a different competency area.
+
+---
+
+## Turn 6 (Difficulty 3/5)
+**Question:** Walk me through a time when you received a dataset with significant missing values and messy formatting in Python or R, and describe the specific steps you took during exploratory data analysis to clean it before modeling or analysis.
+
+**Answer:** When I get a dataset with missing values and messy formatting in Python, I just use standard data cleaning libraries to handle the issues and get things ready for analysis. I'm a real team player, so I always like to collaborate with stakeholders to make sure our approach aligns with the overall business goals. After doing some basic exploratory data analysis, I just look over the final output to make sure it looks reasonable and fits what the team needs.
+
+**Evaluation:**
+```json
+{
+  "scores": {
+    "relevance": 2,
+    "specificity": 1,
+    "depth": 1,
+    "structure": 2,
+    "role_fit": 1
+  },
+  "answer_type": "vague",
+  "strengths": [
+    "Mentions the importance of stakeholder alignment and business goals"
+  ],
+  "gaps": [
+    "Completely lacks technical specifics about data cleaning methods",
+    "Does not walk through an actual specific project or dataset as requested",
+    "Fails to name any libraries, functions, or techniques used for handling missing values or messy formatting"
+  ],
+  "missing_elements": [
+    "Specific Python libraries (e.g., pandas, NumPy)",
+    "Concrete methods for handling missing data (e.g., imputation, dropping, flagging)",
+    "String manipulation or regex techniques for messy formatting",
+    "A coherent walkthrough of an actual dataset scenario"
+  ],
+  "overall": 1.4,
+  "rationale": "The candidate provided a heavily generalized response that avoided any concrete technical details despite the question specifically asking for a walkthrough of a dataset in Python or R. Mentioning collaboration is positive, but the complete lack of technical depth fails to demonstrate the required Data Analyst competencies for this difficulty level."
+}
+```
+
+**Controller:** action=`switch_topic` | rationale: The candidate has failed to provide substantive answers across multiple turns and topics, reaching the limit for probing weaknesses; it is time to move to a fresh topic to assess their competencies more broadly before wrapping up.
+
+---
+
+## Turn 7 (Difficulty 3/5)
+**Question:** Imagine you pull a daily reporting table for stakeholders and notice that a key revenue column has silently dropped to zero due to an upstream schema change. Walk me through how you would detect this issue, communicate with the affected teams, and implement a safeguard to prevent it from happening again.
+
+**Answer:** I would detect this kind of issue by keeping an eye on the numbers and collaborating with stakeholders to make sure everything aligns with our business goals. Once I notice something is off, I would reach out to the affected teams to communicate the problem and work together as a team player to figure out what happened. Finally, I would implement a safeguard by following best practices and working closely with everyone to prevent it from happening again in the future.
+
+**Evaluation:**
+```json
+{
+  "scores": {
+    "relevance": 3,
+    "specificity": 1,
+    "depth": 1,
+    "structure": 3,
+    "role_fit": 1
+  },
+  "answer_type": "vague",
+  "strengths": [
+    "Follows the basic three-part structure of the prompt (detect, communicate, safeguard)"
+  ],
+  "gaps": [
+    "Completely lacks technical specifics and tooling",
+    "Uses generic buzzwords without explaining any actual methods"
+  ],
+  "missing_elements": [
+    "Mention of automated data tests, schema contracts, or anomaly detection",
+    "Specific communication channels or escalation paths",
+    "Concrete safeguards like CI/CD checks or dbt tests"
+  ],
+  "overall": 1.8,
+  "rationale": "The candidate hits the general points requested in the prompt (detection, communication, safeguards) but answers in entirely generic terms without demonstrating any technical knowledge or tooling expected of a Data Analyst."
+}
+```
+
+**Controller:** action=`wrap_up` | rationale: Turn 7 has reached MAX_TURNS (7). Ending interview.
 
 ---
 
 ## Coach Feedback
 
-### ## Overall Read
-This interview performance relied heavily on high-level generalities and behavioral buzzwords rather than demonstrating technical competency. Across multiple questions asking for specific SQL queries, data validation techniques, and dashboard design strategies, your responses defaulted to phrases like "collaborate closely with stakeholders" and "getting the job done for the business" without providing actual technical substance. **Needs focused preparation** — significant gaps that would show in a real interview.
+## Overall Read
+This interview performance relies heavily on high-level generalities and interpersonal buzzwords rather than demonstrating hands-on technical competence as a Data Analyst. Across nearly every question, you pivoted to phrases like "I'm a real team player" and "collaborate with stakeholders" instead of providing concrete methodologies, syntax, or analytical frameworks. Needs focused preparation — significant technical gaps and a lack of specificity would be immediate red flags in a real interview.
 
-### ## Strengths
-- You consistently maintained a polite, professional tone and acknowledged the value of teamwork, noting in your first answer that you had to "collaborate with various stakeholders to make sure I was meeting their needs."
-- You correctly referenced relevant technical concepts and terminology by name, such as mentioning that you "utilize standard advanced constructs like CTEs and window functions."
+## Strengths
+- You consistently acknowledged the importance of cross-functional alignment, stating in your Python data-cleaning answer that you like to "collaborate with stakeholders to make sure our approach aligns with the overall business goals."
+- When discussing the A/B testing scenario, you correctly identified that a p-value of 0.08 introduces uncertainty, noting that "standard statistical concepts mean we aren't completely sure if the results are real or just random noise."
 
-### ## Gaps
-- When asked to walk through the actual syntax and structure of a query in Turn 2, you failed to provide any code or technical details, instead offering the vague generalization that you "always focus on writing clean code that gets the job done."
-- When explicitly asked to write out a specific SQL query to identify duplicates or sequence gaps in Turn 3, you deflected completely and provided another generic statement about "leveraging advanced features like CTEs and window functions" without writing a single line of SQL.
-- When presented with a data cleaning scenario regarding missing income values in Turn 5, you failed to discuss statistical concepts like missingness mechanisms (MCAR, MAR, MNAR) or concrete imputation methods, relying instead on saying you would "collaborate closely with our cross-functional stakeholders."
+## Gaps
+- When asked to provide exact SQL syntax for deduplication, your answer ("I usually just write a SQL query that utilizes standard window functions like ROW_NUMBER()") completely failed to provide the requested code or structure.
+- When challenged on dashboard design for a product team requesting ten pie charts, your response ("I would approach this by talking with the stakeholders to understand their needs") ignored the core data visualization and UX challenges entirely.
+- When asked about handling missing values in Python, your reply ("I just use standard data cleaning libraries to handle the issues") lacked any specific names of libraries, functions, or analytical strategies.
 
-### ## Dimension Scores
+## Dimension Scores
 | Dimension | Average | Interpretation |
 |-----------|---------|----------------|
-| Relevance | 2.2 | Frequently drifted away from direct answers into generic platitudes. |
-| Specificity | 1.0 | Completely devoid of concrete examples, metrics, or syntax. |
-| Depth | 1.0 | Remained strictly at the surface level without analytical rigor. |
-| Structure | 2.4 | Sentences were coherent, but responses lacked a logical technical framework. |
-| Role Fit | 1.2 | Failed to demonstrate the core technical toolkit expected of a Data Analyst. |
+| Relevance | 2.7 | Generally addresses the topic areas, but misses the core technical demands of the prompts. |
+| Specificity | 1.0 | Heavily relies on vague generalizations with a near-total absence of concrete examples, syntax, or metrics. |
+| Depth | 1.1 | Stays entirely on the surface level, avoiding technical breakdowns or statistical mechanics. |
+| Structure | 2.6 | Follows a conversational rhythm, though answers tend to loop back to stakeholder collaboration rather than moving forward logically. |
+| Role Fit | 1.4 | Displays interpersonal awareness, but lacks the core execution and analytical autonomy expected of a Data Analyst. |
 
-### ## Practice Plan
-- **Write out 5 distinct SQL queries from scratch**: Practice writing queries that utilize CTEs (`WITH` clauses) and window functions (`ROW_NUMBER()`, `LAG()`, `LEAD()`) to solve real problems like finding duplicate records or detecting sequence gaps. 
-- **Drill data validation techniques**: Stop relying on "looking over the output." Study how to write row-count reconciliation scripts, pre- and post-aggregation sanity checks, and automated assertions to verify data correctness against raw sources.
-- **Study missing data handling frameworks**: Review the statistical definitions of missing data (MCAR, MAR, MNAR) and practice articulating specific scenarios where you would choose mean/median imputation, model-based imputation, or dropping records.
-- **Draft concrete dashboard design principles**: Prepare a structured answer for dashboard layout challenges that addresses visual hierarchy, grouping metrics by user persona, and pushing secondary charts to drill-down pages instead of cramming them onto a single view.
+## Practice Plan
+- Write out the exact SQL syntax for a deduplication query using `ROW_NUMBER()`, including a Common Table Expression (CTE) and a `PARTITION BY` clause, then test it against a sample table.
+- Build a practice response for the A/B testing scenario that explicitly defines Type I and Type II errors, statistical power, and confidence intervals rather than relying on generalities.
+- Create a structured framework for dashboard design reviews: write down how you would push back on a stakeholder requesting ten pie charts, citing cognitive load limits and best practices for data density.
+- Write a Python script using pandas to inspect a messy dataset, explicitly coding out steps for identifying null value percentages, handling outliers, and documenting your data cleaning decisions.

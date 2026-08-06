@@ -97,7 +97,11 @@ def run(orchestrator: InterviewOrchestrator, debug: bool = False):
         while True:
             event_type, turn_num, data = event
 
-            if event_type == "question":
+            if event_type == "session_start":
+                state = data
+                event = next(gen)
+
+            elif event_type == "question":
                 print(f"\n{'━' * 50}")
                 print(f"  Question {turn_num}/{MAX_TURNS}")
                 print(f"{'━' * 50}")
@@ -133,15 +137,19 @@ def run(orchestrator: InterviewOrchestrator, debug: bool = False):
                 state = data
                 break
 
+            else:
+                event = next(gen)
+
     except KeyboardInterrupt:
         print("\n\nInterview interrupted.")
-        if state and len(state.turns) >= 2 and report is None:
-            print("Generating feedback from partial session...\n")
-            report = orchestrator.coach.summarize(state)
-            print(report)
-        elif state is None or len(getattr(state, 'turns', [])) < 2:
-            print("Not enough turns for feedback. Exiting.")
-            return
+        if report is None:
+            if state and len(state.turns) >= 2:
+                print("Generating feedback from the turns you completed...\n")
+                report = orchestrator.coach.summarize(state)
+                print(report)
+            else:
+                print("Not enough turns for feedback. Exiting.")
+                return
 
     if state and report:
         save_transcript(state, report)
