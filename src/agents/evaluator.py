@@ -1,4 +1,5 @@
 from ..config import TEMPERATURE_JUDGMENT
+from ..prompt_loader import render_prompt
 from ..state import Evaluation
 from .base import Agent
 
@@ -31,11 +32,12 @@ class EvaluatorAgent(Agent):
         super().__init__(client, prompt_name)
 
     def evaluate(self, question: str, answer: str, profile, difficulty: int) -> Evaluation:
-        prompt = self.system_prompt.format(
+        prompt = render_prompt(
+            self.system_prompt,
             target_role=profile.target_role,
             background=profile.background or "Not provided",
             focus_area=profile.focus_area,
-            difficulty=difficulty,
+            difficulty=str(difficulty),
             question=question,
             answer=answer,
         )

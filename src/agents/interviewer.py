@@ -1,4 +1,5 @@
 from ..config import TEMPERATURE_QUESTION
+from ..prompt_loader import render_prompt
 from ..state import SessionState, ControlDecision
 from .base import Agent
 
@@ -23,11 +24,12 @@ class InterviewerAgent(Agent):
         if not history_text:
             history_text = "(This is the first question.)"
 
-        prompt = self.system_prompt.format(
+        prompt = render_prompt(
+            self.system_prompt,
             target_role=state.profile.target_role,
             background=state.profile.background or "Not provided",
             focus_area=state.profile.focus_area,
-            difficulty=state.difficulty,
+            difficulty=str(state.difficulty),
             directive=decision.directive,
             recent_history=history_text,
         )

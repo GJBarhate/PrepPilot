@@ -1,6 +1,7 @@
 import json
 
 from ..config import TEMPERATURE_JUDGMENT, DIFFICULTY_MIN, DIFFICULTY_MAX, MIN_TURNS, MAX_TURNS
+from ..prompt_loader import render_prompt
 from ..state import SessionState, Evaluation, ControlDecision
 from .base import Agent
 
@@ -50,14 +51,15 @@ class AdaptiveControllerAgent(Agent):
         history = json.dumps(state.history_summary(), indent=2)
         eval_json = json.dumps(evaluation.to_dict(), indent=2)
 
-        prompt = self.system_prompt.format(
+        prompt = render_prompt(
+            self.system_prompt,
             target_role=state.profile.target_role,
             background=state.profile.background or "Not provided",
             focus_area=state.profile.focus_area,
-            difficulty=state.difficulty,
-            turn_index=turn_index,
-            min_turns=MIN_TURNS,
-            max_turns=MAX_TURNS,
+            difficulty=str(state.difficulty),
+            turn_index=str(turn_index),
+            min_turns=str(MIN_TURNS),
+            max_turns=str(MAX_TURNS),
         )
 
         user_content = (

@@ -1,6 +1,7 @@
 import json
 
 from ..config import TEMPERATURE_COACH
+from ..prompt_loader import render_prompt
 from ..state import SessionState
 from .base import Agent
 
@@ -35,7 +36,8 @@ class CoachAgent(Agent):
 
         difficulties = [t.difficulty for t in state.turns]
 
-        prompt = self.system_prompt.format(
+        prompt = render_prompt(
+            self.system_prompt,
             target_role=state.profile.target_role,
             background=state.profile.background or "Not provided",
             focus_area=state.profile.focus_area,

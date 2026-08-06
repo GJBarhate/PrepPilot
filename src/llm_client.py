@@ -38,6 +38,10 @@ class GeminiClient:
         msg = str(exc).lower()
         return "429" in msg or "resource_exhausted" in msg or "rate" in msg
 
+    def _is_invalid_key(self, exc: Exception) -> bool:
+        msg = str(exc).lower()
+        return "api_key_invalid" in msg or "api key not valid" in msg
+
     def generate(self, system_prompt: str, user_content: str, temperature: float) -> str:
         max_attempts = 2 * len(self._clients)
         backoff = 1.0
@@ -55,7 +59,7 @@ class GeminiClient:
                 )
                 return response.text.strip()
             except Exception as e:
-                if self._is_rate_limit(e):
+                if self._is_rate_limit(e) or self._is_invalid_key(e):
                     self._bench_current()
                     continue
                 if "500" in str(e) or "503" in str(e) or "unavailable" in str(e).lower():
@@ -106,7 +110,7 @@ class GeminiClient:
             except json.JSONDecodeError as e:
                 raise RuntimeError(f"Failed to parse JSON from Gemini after repair attempt: {e}") from e
             except Exception as e:
-                if self._is_rate_limit(e):
+                if self._is_rate_limit(e) or self._is_invalid_key(e):
                     self._bench_current()
                     continue
                 if "500" in str(e) or "503" in str(e) or "unavailable" in str(e).lower():

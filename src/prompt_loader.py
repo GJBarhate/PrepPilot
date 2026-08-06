@@ -1,4 +1,5 @@
 import os
+import re
 
 _cache: dict[str, str] = {}
 
@@ -15,3 +16,9 @@ def load_prompt(name: str) -> str:
         text = f.read()
     _cache[name] = text
     return text
+
+
+def render_prompt(template: str, **kwargs) -> str:
+    for key, value in kwargs.items():
+        template = template.replace(f"{{{key}}}", str(value))
+    return template
